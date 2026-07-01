@@ -1,0 +1,32 @@
+{
+  "name": "Vue and Flask Sandbox",
+  "image": "://microsoft.com",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "forwardPorts": [5173, 8000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vue Frontend",
+      "onAutoForward": "openPreview"
+    },
+    "8000": {
+      "label": "Flask Backend",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "Vue.volar",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
